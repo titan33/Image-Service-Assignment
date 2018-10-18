@@ -4,6 +4,7 @@ import com.mangofactory.swagger.plugin.EnableSwagger;
 import nl.debijenkorf.bsl.services.BSLStartService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,9 +16,7 @@ import java.util.Arrays;
 
 @EnableSwagger
 @EnableWebMvc
-@EnableAutoConfiguration
-@ComponentScan
-@Configuration
+@SpringBootApplication
 @ImportResource("classpath:spring-config.xml")
 public class Application {
     public static void main(String[] args) {
